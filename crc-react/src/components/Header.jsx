@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function Header() {
+  const [open, setOpen] = useState(false)
   return (
     <>
       <div className="gc_top_header_wrapper hidden-xs">
@@ -46,7 +48,7 @@ export default function Header() {
       <div className="gc_main_menu_wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 hidden-xs hidden-sm">
+            <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div className="gc_header_wrapper">
                 <div className="gc_logo">
                   <Link to="/"><img src="/site/images/header/logo.jpg" alt="Logo" title="Grace Church" className="img-responsive" /></Link>
@@ -55,7 +57,10 @@ export default function Header() {
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div className="header-area hidden-menu-bar stick" id="sticker">
-                <div className="mainmenu">
+                <button type="button" className="menu-toggle visible-xs visible-sm" onClick={() => setOpen(v => !v)}>
+                  <i className="fa fa-bars"></i>
+                </button>
+                <div className={`mainmenu${open ? ' open' : ''}`}>
                   <ul>
                     <li className="gc_main_navigation parent"><Link to="/" className="gc_main_navigation">Home</Link></li>
                     <li className="has-mega gc_main_navigation"><Link to="#" className="gc_main_navigation">Pages</Link>

@@ -22,3 +22,27 @@
 .gc_main_menu_wrapper .mainmenu > ul > li > span {
   text-decoration: none;
 }
+@media (max-width: 991px) {
+  .gc_main_menu_wrapper .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    margin: 8px 0;
+  }
+  .gc_main_menu_wrapper .mainmenu > ul {
+    display: none;
+  }
+  .gc_main_menu_wrapper .mainmenu.open > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 0;
+  }
+  .gc_main_menu_wrapper .col-lg-6 {
+    margin-left: 0;
+  }
+}
