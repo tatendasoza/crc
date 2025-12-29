@@ -1,0 +1,15 @@
+.gc_main_menu_wrapper .mainmenu > ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 12px 0;
+  margin: 0;
+  list-style: none;
+}
+.gc_main_menu_wrapper .mainmenu > ul > li {
+  display: inline-block;
+}
+.gc_main_menu_wrapper .mainmenu > ul > li > a,
+.gc_main_menu_wrapper .mainmenu > ul > li > span {
+  text-decoration: none;
+}
