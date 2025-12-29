@@ -11,6 +11,17 @@ export default function StaticHtml({ path }) {
         if (!mounted || !ref.current) return
         const match = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i)
         ref.current.innerHTML = match ? match[1] : html
+        const selectorsToRemove = [
+          '.gc_top_header_wrapper',
+          '.gc_main_menu_wrapper',
+          'header.mobail_menu',
+          '.gc_footer_main_wrapper',
+          '.gc_bottom_footer_main_wrapper',
+          'script'
+        ]
+        selectorsToRemove.forEach(sel => {
+          ref.current.querySelectorAll(sel).forEach(el => el.remove())
+        })
         initLegacy()
       })
       .catch(() => {
