@@ -1,10 +1,14 @@
 .gc_main_menu_wrapper .mainmenu > ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 40px;
   padding: 12px 0;
   margin: 0;
   list-style: none;
+}
+.gc_main_menu_wrapper .col-lg-6 {
+  display: flex;
+  justify-content: flex-end;
 }
 .gc_main_menu_wrapper .mainmenu > ul > li {
   display: inline-block;

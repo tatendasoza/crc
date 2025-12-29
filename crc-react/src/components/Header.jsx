@@ -58,7 +58,7 @@ export default function Header() {
                 <div className="mainmenu">
                   <ul>
                     <li className="gc_main_navigation parent"><Link to="/" className="gc_main_navigation">Home</Link></li>
-                    <li className="has-mega gc_main_navigation"><span className="gc_main_navigation">Pages</span>
+                    <li className="has-mega gc_main_navigation"><Link to="#" className="gc_main_navigation">Pages</Link>
                       <ul>
                         <li className="parent"><Link to="/about">About</Link></li>
                         <li className="parent"><Link to="/homegroup">Home Group</Link></li>
@@ -66,13 +66,13 @@ export default function Header() {
                       </ul>
                     </li>
                     <li className="has-mega gc_main_navigation"><Link to="/event" className="gc_main_navigation">Event</Link></li>
-                    <li className="has-mega gc_main_navigation"><span className="gc_main_navigation">Media</span>
+                    <li className="has-mega gc_main_navigation"><Link to="#" className="gc_main_navigation">Media</Link>
                       <ul>
                         <li className="parent"><Link to="/sermons">Sermons</Link></li>
                         <li className="parent"><Link to="/podcast">Podcast</Link></li>
                       </ul>
                     </li>
-                    <li className="has-mega gc_main_navigation"><span className="gc_main_navigation">Gallery</span>
+                    <li className="has-mega gc_main_navigation"><Link to="#" className="gc_main_navigation">Gallery</Link>
                       <ul>
                         <li className="parent"><Link to="/gallery-ii">Gallery-II</Link></li>
                         <li className="parent"><Link to="/gallery-iii">Gallery-III</Link></li>
